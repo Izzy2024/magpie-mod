@@ -1,5 +1,5 @@
 {
-  "name": "magpie-mod",
+  "name": "herdr-mod-magpie",
   "description": "Herdr side panel that shows Magpie routing: accounts as shared rows, one bird per in-flight request, failover back to Magpie, and a request log.",
   "private": true,
   "type": "module",
