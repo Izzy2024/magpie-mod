@@ -1,1 +1,15 @@
-{ "name": "herdr-mod-routing", "private": true, "type": "module" }
+{
+  "name": "magpie-mod",
+  "description": "Herdr side panel that shows Magpie routing: accounts as shared rows, one bird per in-flight request, failover back to Magpie, and a request log.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Izzy2024/magpie-mod.git"
+  },
+  "scripts": {
+    "install-mod": "node scripts/install.mjs",
+    "check": "node scripts/check-logic.mjs"
+  }
+}
