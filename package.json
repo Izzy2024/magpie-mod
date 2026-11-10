@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "license": "MIT",
+  "bin": {
+    "magpie-routing": "scripts/install.mjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Izzy2024/magpie-mod.git"

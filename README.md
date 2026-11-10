@@ -23,14 +23,19 @@ Keys (click the panel first): `↑`/`↓` or `j`/`k` move through requests, `Esc
 
 ## Install
 
-The layout in use is the personal `main-graph` layout (`tabs-graph` draws the tab bar). Shipped Herdr layouts are replaced on update; this one is a clone.
+One command (Node 18+ and Herdr running):
 
 ```sh
-node scripts/install.mjs        # copies the mod, wires the panel and the tab-bar button, runs herdr-app check
-node scripts/check-logic.mjs    # no gateway or log needed
+npx github:Izzy2024/magpie-mod
 ```
 
-`layouts/main-graph.json` needs a `routing` child in the `panel-body` stack, and `mods/tabs-graph/main.js` needs the Routing button after Changes. The install script adds both and leaves them alone when they are already there.
+Or clone and run `node scripts/install.mjs`. `--dry-run` prints the plan; `--uninstall` removes the mod and the button.
+
+The script copies `mods/routing` and adds a **Routing** button after Changes. Herdr replaces its own `main` layout and `tabs` mod on every start, so on that window the script clones them to `main-routing` and `tabs-routing` and switches to the clone (`ctrl-shift-l` goes back). A personal layout is edited in place and stays on screen.
+
+`node scripts/check-logic.mjs` checks the flight geometry with no gateway and no log.
+
+Gallery: once this repo has the topic `herdr-mod`, it is listed at [herdr.dev/mods/Izzy2024/magpie-mod](https://herdr.dev/mods/Izzy2024/magpie-mod). Tell an agent: `Read ~/.config/herdr-app/AGENTS.md, then add this mod: herdr.dev/mods/Izzy2024/magpie-mod`. The recipe tells it to run the installer, because copying the folder alone does not show the panel.
 
 ## How it is built
 
